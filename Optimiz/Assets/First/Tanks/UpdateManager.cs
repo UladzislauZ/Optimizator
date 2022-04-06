@@ -9,7 +9,7 @@ public class UpdateManager : MonoBehaviour
     public GameObject tankPrefab;
     private void Start()
     {
-        tanks = new TankUpdatable[numberOfTanks];
+        tanks = new IUpdatable[numberOfTanks];
         for (var i = 0; i < numberOfTanks; i++)
         {
             tanks[i] = Instantiate(tankPrefab, new Vector3(Random.Range(-50f,50f), 0, Random.Range(-50f,50f)), Quaternion.identity).GetComponent<TankUpdatable>();
